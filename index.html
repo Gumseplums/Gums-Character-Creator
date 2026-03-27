@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Creator</title>
+
+    <link rel="stylesheet" href="CharacterCreator.css">                          <!-- Code to link HTML to CSS code -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jua">   <!-- Link to google font Jua  -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Itim">  <!-- Link to google font Itim -->
+
+</head>
+<body>
+
+    <section class="MainWindow Window" id="MainWindow">
+        <p>This is the Main window</p>
+
+        <div id="HeadDIV" class="SVGDiv">  <!-- Head -->
+            <canvas id="TorsoCanvas"         class="Canvas"></canvas>
+            <canvas id="NeckCanvas"          class="Canvas"></canvas>
+            <canvas id="HeadCanvas"          class="Canvas"></canvas>
+            <canvas id="LeftEarCanvas"       class="Canvas"></canvas>
+            <canvas id="RightEarCanvas"      class="Canvas"></canvas>
+            <canvas id="LeftShoulderCanvas"  class="Canvas"></canvas>
+            <canvas id="RightShoulderCanvas" class="Canvas"></canvas>
+            <canvas id="LeftArmCanvas"       class="Canvas"></canvas>
+            <canvas id="RightArmCanvas"      class="Canvas"></canvas>
+            <canvas id="LeftHandCanvas"      class="Canvas"></canvas>
+            <canvas id="RightHandCanvas"     class="Canvas"></canvas>
+            <canvas id="LeftThighCanvas"     class="Canvas"></canvas>   
+            <canvas id="RightThighCanvas"    class="Canvas"></canvas>
+            <canvas id="LeftLegCanvas"       class="Canvas"></canvas>
+            <canvas id="RightLegCanvas"      class="Canvas"></canvas>
+            <canvas id="LeftFootCanvas"      class="Canvas"></canvas>
+            <canvas id="RightFootCanvas"     class="Canvas"></canvas>
+                                                    
+
+            <canvas id="EverythingCanvas"  class="Canvas"></canvas>
+        </div>
+
+    </section>
+
+    <section class="ButtonWindow Window" id="ButtonDivParent">
+        <div class="ButtonsDiv" id="ButtonDiv">
+
+            <div id="MainPage" style="display: inline-block;">
+                <p class="Ptext"> Main Page </p>
+                <button class="Button" title="Character Creator"    data-GoToPage="CharacterCreator" accesskey="c"></button>
+                <button class="Button" title="About The Website"    data-GoToPage="AboutTheWebsite"></button>
+                <button class="Button" title="Settings And Options" data-GoToPage="SettingsAndOptions"></button>
+                <!-- <button class="Button" title="Support Me"           data-GoToPage="SupportMe"></button> -->
+                <button class="Button" title="MainPage"             data-GoToPage="MainPage" style="display: none;" accesskey="m"></button> <!-- Only here to have the access key -->            
+            </div>
+
+            <div id="CharacterCreator"  style="display: none;">
+                <p class="Ptext"> This is CharacterCreator</p>
+                <button class="Button" title="Body Limbs"                     data-GoToPage="BodyLimbsDiv"></button>
+                <button class="Button" title="Body Features"                  data-GoToPage=""></button>
+                <button class="Button" title="Upper Clothing and Accessories" data-GoToPage=""></button>
+                <button class="Button" title="Lower Clothing and Accessories" data-GoToPage=""></button>                                                                                            
+            </div>
+
+            <div id="AboutTheWebsite" style="display: none;">
+                <p class="Ptext"> This is AboutTheWebsite</p>
+                <p>Lots of cool and interesting text about website. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore similique quaerat incidunt explicabo eaque perspiciatis ad consectetur, recusandae autem maxime perferendis magnam temporibus totam sapiente nemo corporis. Nemo, debitis iure.</p>
+            </div>
+
+            <div id="SettingsAndOptions" style="display: none;">
+                <p class="Ptext"> This is SettingsAndOptions</p>
+                <p> Here are a bunch of settings and options and even some tips! Like did you know you can quickly go back by pressing "Alt + B"? Do you think that's a horrible and disgusting keybind? Well then, a bit of an overreaction, BUT! You can change it(I lied. You can't. I haven't added that feature yet.). There is also " ALt + C" to quickly get to character Creator page. There's even " Alt + m " for main menu :></p>                
+            
+                <button class="Button" title="Expert Settings"    data-GoToPage="SVGSettingsComplex"></button>            
+            </div>             
+
+            <div id="SupportMe" style="display: none;">
+                <p class="Ptext"> This is SupportMe</p>
+                <p> :o You wanna support me? Or maybe you're just exploring the site. I don't know. Well this project is made with pure love and care from a HUMAN. There are no paywalls, so everything is completely free, and there aren't even those ads or annoying pop up vidoe things. Ugh. Please I'll die before I add that. But I put a lot of effort into this so if you wanna show some appreciation then you've got a few options! You can do a one time payment, buy me a hot chocolate. mmmmmmmmm. No promises I'll actually buy hot chocolate with the money. Might buy one of those pasteries at lidl. You can also join my Patreon if you wanna support me more than once! If you do, then you'll get access to updates earlier and even get to try experimental/early versions. Now, if you don't want to get your money and throw it at me (that's okay, I'd rather have it handed to me), you can watch this little video ad! I know I said theres no ads, but this is where you choose to watch an ad... for me!</p>                
+            </div>
+
+
+            <div id="SVGSettingsComplex" style="display: none;">
+                <p class="Ptext"> This is SVGSettings</p>
+                <h4>Outline Settings</h4>
+                <p> Outline Thickness</p>
+                <input type="number" min="0" max="150" value="20"    id="ThicknessInput" class="ThicknessInput">
+
+                <p>Dashed Line</p>
+                <input type="text" placeholder="20 50 100 ..."    id="DashedLines">
+
+                <p>Outline colour</p>
+                <input type="color"  value="#000000"     id="OutlineColour">
+
+                <h4>Colour Settings</h4>
+                <p>Colour one</p>
+                <input type="color"  value="#ffffff"     id="BackgroundColour">
+                <p>Colour two</p>
+                <input type="color"  value="#04aa6d">   
+                <p>Colour three</p>
+                <input type="color"  value="#5865f2">
+                
+                <h4>Transfrom</h4>
+                <p>Coords</p>
+                <input type="number" value="400" step="10"    placeholder="Y coordinate value"     id="Ycoords">
+                <input type="number" value="50"  step="10"    placeholder="X coordinate value"     id="Xcoords">
+
+                <p>Scale</p>
+                <input type="number" value="0.3"  step="0.01"   placeholder="Y scale value"    id="Yscale">
+                <input type="number" value="0.3"  step="0.01"   placeholder="X scale value"    id="Xscale">
+
+                <p>Rotation</p>
+                <input type="number" step="1"   placeholder="Rotation value (Weird to use)"    id="SpinRotation">
+
+                <button class="Button" id="SaveButton" title="SaveImg"></button>
+
+            </div>
+           
+
+            <div id="BodyLimbsDiv" style="display: none;"> <!-- BODY LIMBS AYAYAYA-->
+                <p class="Ptext"> This is BodyLimbs</p>
+
+                <button class="Button"  title="Head"  data-GoToPage="AssetButtonDiv"></button> <!-- Ok we gotta make it spawn options for the head. Ok. dw. we got this we got ittt.....-->
+                <button class="Button"  title="Neck"  data-GoToPage="AssetButtonDiv"></button>                
+                <button class="Button"  title="Torso" data-GoToPage="AssetButtonDiv"></button>
+                <button class="Button"  title="Arms"  data-GoToPage=" "></button>
+                <button class="Button"  title="Hands" data-GoToPage=" "></button>
+                <button class="Button"  title="Legs"  data-GoToPage=" "></button>
+                <button class="Button"  title="Feet"  data-GoToPage=" "></button>
+
+            </div>
+
+            <div id="AssetButtonDiv" style="display: none;">
+
+            </div>
+        </div> <!---------------------------------------------------------------- THIS IS THE END OF THE BUTTONS DIV ---------------------------------------------------------------->
+        <div class="PrimaryButtonsDiv">
+                <button class="PrimaryButton" title="Advanced Levels"></button>
+                <button class="PrimaryButton" title="Download Asset" id="DownloadAllCanvas"></button>
+                <button class="PrimaryButton" title="Item settings" data-GoToPage="SVGSettingsComplex" id="ItemSettingsButton"></button>
+                <button class="PrimaryButton" title="Go Back"       accesskey="b" id="GoBackButton"></button>
+        </div>
+
+    </section>
+</body>
+
+<!--    <script type="text/javascript" src="CharacterCreator.js"></script>  -->
+    <script type="text/javascript" src="NewJS.js"></script>
+
+</html>
