@@ -1,0 +1,164 @@
+body {
+    background-color: var(--Background);
+
+    position: relative;
+
+/*    overflow: hidden; */
+}
+
+/* ------------------------------------------------------------------------ */
+
+:root {
+    --Background:      #7534b3;
+    --DarkOutline:     #0f1275;
+    --MainBackground:  #b1d5f7;
+}
+
+/* ------------------------------------------------------------------------ */
+
+.Window {
+    position: absolute;
+    
+    border: 10px var(--DarkOutline) solid;
+    border-radius: 20px;
+    background-color: var(--MainBackground);
+
+    height: 96vh;
+}
+
+.PText {
+    text-align: center;
+}
+
+.MainWindow {   
+    left: 0;
+    right: 36%;
+}
+
+.ButtonWindow {   
+    right: 0px;
+    left: 65%;
+}
+
+/*Buttons*/
+
+.ButtonsDiv {
+    position: absolute;
+    display: grid;
+    text-align: center;
+
+    width: 100%;    
+    height: 80vh;
+    overflow:auto;  
+}
+
+.Button {
+    margin: 2%;
+    height: 120px;
+    width: 120px;
+    background-size: contain;
+}
+
+.Button:hover {
+    transform: scale(1.05);
+
+    cursor: pointer;
+
+    animation-name: ButtonHover;
+    animation-duration: 5s;
+    animation-iteration-count: infinite    
+}
+
+/*Extra Buttons*/
+
+.PrimaryButtonsDiv {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    
+
+    background-color: var(--DarkOutline);      
+
+    height: 10%;
+    width: 100%;
+    bottom: 0;  
+}
+
+.PrimaryButton {
+    margin: 2%;
+    height: 80px;
+    width: 80px;
+    object-fit: contain;
+
+}
+
+.PrimaryButton:hover {
+    transform: scale(1.05);
+
+    animation-name: Wiggle;
+    animation-duration: 2s;
+    animation-iteration-count: infinite
+}
+
+/*  Styles for the customization things    */
+
+.ThicknessSlider {
+    appearance: none;
+    width: 90%;
+    height: 20px;
+
+    outline: 5px #0d0e6e solid;
+    border-radius: 20px;
+    background-color: rgb(110, 153, 235)
+}
+
+.ThicknessSlider::-webkit-slider-thumb {
+    appearance: none;
+
+    width: 18px;
+    height: 18px;
+
+    cursor:pointer;
+
+    background: #0d0e6e;
+    border-radius: 20px;
+  
+}
+
+/* Styles for the different things canvases */
+
+.Head {
+
+    background-size: 250%;
+    background-position-x: 50%;
+    background-position-y: 4%;
+}
+
+.Torso {
+
+    background-size: 200%;
+    background-position-x: 50%;
+    background-position-y: 43%;
+}
+
+.Canvas {
+    border: 2px solid rgb(255, 0, 0);
+
+    position: absolute;
+}
+
+
+/*Animations*/
+
+@keyframes Wiggle {
+  0%   {transform: rotate(0deg)}
+  25%  {transform: rotate(-4deg)}
+  75%  {transform: rotate(4deg)}
+  100% {transform: rotate(0deg)}    
+}
+
+@keyframes ButtonHover {
+  1%    {transform: scale(1.05)}
+  50%   {transform: scale(1.1)}
+  100%  {transform: scale(1.05)}  
+}
