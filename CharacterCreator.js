@@ -35,7 +35,7 @@ Buttons.forEach(Buttons => {
 
 const CCBTN = document.getElementById("CCBTN")
 
-CCBTN.style.backgroundImage = "url('Body/Green Music Note.png')";
+CCBTN.style.backgroundImage = "url('Body/Head.svg')";
 
 console.log(CCBTN)
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -244,7 +244,7 @@ function AddAssetsToDiv (AssetLocation){
 
     AssetLocation.forEach(Asset => {
         AssetFilePath = Asset.FilePath;
-         AssetFilePathURL = (".."+AssetFilePath);
+        AssetFilePathURL = ("url('"+AssetFilePath+"')"); 
 
         let Btn  = document.createElement("button");
         AssetDiv.appendChild(Btn);
