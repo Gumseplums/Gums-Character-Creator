@@ -244,7 +244,7 @@ function AddAssetsToDiv (AssetLocation){
 
     AssetLocation.forEach(Asset => {
         AssetFilePath = Asset.FilePath;
-        //AssetFilePathURL = ("url('"+AssetFilePath+"')");    // might break, may only work locally
+         AssetFilePathURL = (".."+AssetFilePath);
 
         let Btn  = document.createElement("button");
         AssetDiv.appendChild(Btn);
