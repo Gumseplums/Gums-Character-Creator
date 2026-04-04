@@ -16,23 +16,23 @@
         <p>This is the Main window</p>
 
         <div id="HeadDIV" class="SVGDiv">  <!-- Head -->
-            <canvas id="TorsoCanvas"         class="Canvas"></canvas>
-            <canvas id="NeckCanvas"          class="Canvas"></canvas>
-            <canvas id="HeadCanvas"          class="Canvas"></canvas>
-            <canvas id="LeftEarCanvas"       class="Canvas"></canvas>
-            <canvas id="RightEarCanvas"      class="Canvas"></canvas>
-            <canvas id="LeftShoulderCanvas"  class="Canvas"></canvas>
-            <canvas id="RightShoulderCanvas" class="Canvas"></canvas>
-            <canvas id="LeftArmCanvas"       class="Canvas"></canvas>
-            <canvas id="RightArmCanvas"      class="Canvas"></canvas>
-            <canvas id="LeftHandCanvas"      class="Canvas"></canvas>
-            <canvas id="RightHandCanvas"     class="Canvas"></canvas>
-            <canvas id="LeftThighCanvas"     class="Canvas"></canvas>   
-            <canvas id="RightThighCanvas"    class="Canvas"></canvas>
-            <canvas id="LeftLegCanvas"       class="Canvas"></canvas>
-            <canvas id="RightLegCanvas"      class="Canvas"></canvas>
-            <canvas id="LeftFootCanvas"      class="Canvas"></canvas>
-            <canvas id="RightFootCanvas"     class="Canvas"></canvas>
+            <canvas id="HeadCanvas"          class="Canvas" style="z-index: 0;"></canvas>
+            <canvas id="LeftEarCanvas"       class="Canvas" style="z-index: 0;"></canvas>
+            <canvas id="RightEarCanvas"      class="Canvas" style="z-index: 0;"></canvas>            
+            <canvas id="NeckCanvas"          class="Canvas" style="z-index: 0;"></canvas>                   
+            <canvas id="TorsoCanvas"         class="Canvas" style="z-index: 0;"></canvas>
+            <canvas id="LeftShoulderCanvas"  class="Canvas" style="z-index: 0;"></canvas>
+            <canvas id="RightShoulderCanvas" class="Canvas" style="z-index: 0;"></canvas>
+            <canvas id="LeftArmCanvas"       class="Canvas" style="z-index: 0;"></canvas>
+            <canvas id="RightArmCanvas"      class="Canvas" style="z-index: 0;"></canvas>
+            <canvas id="LeftHandCanvas"      class="Canvas" style="z-index: 0;"></canvas>
+            <canvas id="RightHandCanvas"     class="Canvas" style="z-index: 0;"></canvas>
+            <canvas id="LeftThighCanvas"     class="Canvas" style="z-index: 0;"></canvas>   
+            <canvas id="RightThighCanvas"    class="Canvas" style="z-index: 0;"></canvas>
+            <canvas id="LeftLegCanvas"       class="Canvas" style="z-index: 0;"></canvas>
+            <canvas id="RightLegCanvas"      class="Canvas" style="z-index: 0;"></canvas>
+            <canvas id="LeftFootCanvas"      class="Canvas" style="z-index: 0;"></canvas>
+            <canvas id="RightFootCanvas"     class="Canvas" style="z-index: 0;"></canvas>
                                                     
 
             <canvas id="EverythingCanvas"  class="Canvas"></canvas>
@@ -48,12 +48,11 @@
                 <button class="Button" title="Character Creator"    data-GoToPage="CharacterCreator" accesskey="c"></button>
                 <button class="Button" title="About The Website"    data-GoToPage="AboutTheWebsite"></button>
                 <button class="Button" title="Settings And Options" data-GoToPage="SettingsAndOptions"></button>
-                <!-- <button class="Button" title="Support Me"           data-GoToPage="SupportMe"></button> -->
-                <button class="Button" title="MainPage"             data-GoToPage="MainPage" style="display: none;" accesskey="m"></button> <!-- Only here to have the access key -->
-
+                <button class="Button" title="Support Me"           data-GoToPage="SupportMe"></button>
+                <button class="Button" title="MainPage"             data-GoToPage="MainPage" style="display: none;" accesskey="m"></button> <!-- Only here to have the access key --> 
+                
                 <p>WARNING!!! This website is in a barely functional state !!!WARNING</p>
                 <p style="text-align: left;">- Styled with PC screen dimensions in mind.<br>- Pressing certain buttons will cause the page to "Break", please reload the page when that occurs.<br>- Hovering over a button for a few moments will let you read it's title to know what it leads<br>- Pressing the first left button 3 times will take you to the head assets. 4th time will choose an asset to appear. This is when changing the options in "item settings" do something<br>- Currently there are only 3 limbs to use. Head, Neck, and Torso.</p>
-                
             </div>
 
             <div id="CharacterCreator"  style="display: none;">
@@ -114,6 +113,9 @@
                 <p>Rotation</p>
                 <input type="number" step="1"   placeholder="Rotation value (Weird to use)"    id="SpinRotation">
 
+                <p>Layer</p>
+                <input type="number" step="1"   placeholder="Which should be shown first" value="0" id="ZLayer">
+
                 <button class="Button" id="SaveButton" title="SaveImg"></button>
 
             </div>
@@ -125,7 +127,7 @@
                 <button class="Button"  title="Head"  data-GoToPage="AssetButtonDiv"></button> <!-- Ok we gotta make it spawn options for the head. Ok. dw. we got this we got ittt.....-->
                 <button class="Button"  title="Neck"  data-GoToPage="AssetButtonDiv"></button>                
                 <button class="Button"  title="Torso" data-GoToPage="AssetButtonDiv"></button>
-                <button class="Button"  title="Arms"  data-GoToPage=" "></button>
+                <button class="Button"  title="LeftEar"  data-GoToPage="AssetButtonDiv"></button>
                 <button class="Button"  title="Hands" data-GoToPage=" "></button>
                 <button class="Button"  title="Legs"  data-GoToPage=" "></button>
                 <button class="Button"  title="Feet"  data-GoToPage=" "></button>
@@ -146,8 +148,6 @@
     </section>
 </body>
 
-<!--    <script type="text/javascript" src="CharacterCreator.js"></script>  -->
-    <script type="text/javascript" src="NewJS.js"></script>
+<script type="text/javascript" src="CharacterCreator.js"></script>
 
 </html>
-
