@@ -1,17 +1,3 @@
-/*
-ok. We are rewriting the whole thing but we are gonna use OBJECTS.
-
-Now, this is quite a big task, but honestly, the logic works. I just gotta make it better
-You got this.
-I say we begin like how we wrote it.
-We do the Button Pages.
-And then we parse the js
-and then, we are ready to do the real fixing. 
-but
-for now?
-learn.
-*/
-
 const Buttons        = document.querySelectorAll("button");
 const BackBtn        = document.getElementById("GoBackButton");
 const SaveBtn        = document.getElementById("SaveButton")
@@ -47,7 +33,11 @@ Buttons.forEach(Buttons => {
   })
 });
 
+const CCBTN = document.getElementById("CCBTN")
 
+CCBTN.style.backgroundImage = "/Body/Green Music Note.png"
+
+console.log(CCBTN)
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
