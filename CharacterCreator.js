@@ -35,7 +35,7 @@ Buttons.forEach(Buttons => {
 
 const CCBTN = document.getElementById("CCBTN")
 
-CCBTN.style.backgroundImage = "../Body/Green Music Note.png";
+CCBTN.style.backgroundImage = "url('Body/Green Music Note.png')";
 
 console.log(CCBTN)
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
