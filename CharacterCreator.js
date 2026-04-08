@@ -1,59 +1,3 @@
-/*
-ok. We are rewriting the whole thing but we are gonna use OBJECTS.
-
-Now, this is quite a big task, but honestly, the logic works. I just gotta make it better
-You got this.
-I say we begin like how we wrote it.
-We do the Button Pages.
-And then we parse the js
-and then, we are ready to do the real fixing. 
-but
-for now?
-learn.
-*/
-
-const Buttons        = document.querySelectorAll("button");
-const BackBtn        = document.getElementById("GoBackButton");
-const SaveBtn        = document.getElementById("SaveButton")
-const DwlAllCanvas   = document.getElementById("DownloadAllCanvas")
-const ItemSettingBtn = document.getElementById("ItemSettingsButton");
-let CurrentPage      = document.getElementById("MainPage");   
-let DestinationPage;                                      
-let ParentPageTree  = [];
-
-Buttons.forEach(Buttons => {
-  Buttons.addEventListener("click", () => {   
-    if (Buttons == BackBtn) {                         
-      if (ParentPageTree[0] == null) {} else {            
-        ParentPageTree[0].style.display="Inline-block"    
-        CurrentPage.style.display="none"                  
-        CurrentPage = ParentPageTree[0];                  
-        ParentPageTree.shift();                           
-      }
-    } else if (Buttons == SaveBtn) {
-      console.log("TRYING TO SAVE AN IMAGE HUH??")
-      SaveImg()
-    } else if (Buttons == DwlAllCanvas) {
-      SaveAllImg()
-    } else {
-        CurrentPage.style.display="none"                                        
-        let DestinationPageString = Buttons.getAttribute("data-GoToPage");      
-        DestinationPage = document.getElementById(DestinationPageString);     
-        ParentPageTree.unshift(CurrentPage);                                  
-        CurrentPage = DestinationPage;                                        
-        CurrentPage.style.display="Inline-block";                             
-        DestinationPage = null;                               
-    }
-  })
-});
-
-
-const CCBTN = document.getElementById("CCBTN")
-
-CCBTN.style.backgroundImage = "url('Body/Head.svg')";
-
-console.log(CCBTN)
-
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -63,7 +7,6 @@ let Catergory      = "variable is undefined";
 let ItemTypeString = "variable is undefined";
 let SpecificAsset  = "variable is undefined";
 
-const ButtonDivParent    = document.getElementById("ButtonDivParent");
 const ButtonDiv          = document.getElementById("ButtonsDiv");
 const AssetDiv           = document.getElementById("AssetButtonDiv");
 const MainWindow         = document.getElementById("MainWindow");
@@ -121,61 +64,112 @@ let DefaultValues = {
 
 
 // -------------------------- ASSET VALUES
-let HeadAsset = {
-    Canvas: Head,
-    CanvasElement: HeadCanvas,
-    Ycoords: 400,
-    Xcoords: 50,
-    Yscale : 0.3,
-    Xscale : 0.3,
-    SpinRotation: 0,
-    LineWidth: 20,
-    StrokeColour: "#000000",
-    DashInput: "",
-    Fill: "#ffffff",
-    ZLayer: 0,
-    Path: null
-}
+/*
+let FrontView = {
+  HeadAsset : {
+      Canvas: Head,
+      CanvasElement: HeadCanvas,
+      Ycoords: 400,
+      Xcoords: 50,
+      Yscale : 0.3,
+      Xscale : 0.3,
+      SpinRotation: 0,
+      LineWidth: 20,
+      StrokeColour: "#000000",
+      DashInput: "",
+      Fill: "#ffffff",
+      ZLayer: 0,
+      Path: null
+  },
 
-let NeckAsset = {
-    Canvas: Neck,
-    CanvasElement: NeckCanvas,      
-    Ycoords: 433,
-    Xcoords: 170,
-    Yscale : 0.3,
-    Xscale : 0.3,
-    SpinRotation: 0,
-    LineWidth: 20,
-    StrokeColour: "#000000",
-    DashInput: "",
-    Fill: "#ffffff",
-    ZLayer: 0,    
-    Path: null
-}
+  NeckAsset : {
+      Canvas: Neck,
+      CanvasElement: NeckCanvas,      
+      Ycoords: 433,
+      Xcoords: 170,
+      Yscale : 0.3,
+      Xscale : 0.3,
+      SpinRotation: 0,
+      LineWidth: 20,
+      StrokeColour: "#000000",
+      DashInput: "",
+      Fill: "#ffffff",
+      ZLayer: 0,    
+      Path: null
+  },
 
-let TorsoAsset = {
-    Canvas: Torso,
-    CanvasElement: TorsoCanvas,    
-    Ycoords: 403,
-    Xcoords: 200,
-    Yscale : 0.3,
-    Xscale : 0.3,
-    SpinRotation: 0,
-    LineWidth: 20,
-    StrokeColour: "#000000",
-    DashInput: "",
-    Fill: "#ffffff",
-    ZLayer: 0,    
-    Path: null
-}
-
-
-let ItemTypeVariable = {
-    Head:  HeadAsset,
-    Neck:  NeckAsset,
-    Torso: TorsoAsset,
+  TorsoAsset : {
+      Canvas: Torso,
+      CanvasElement: TorsoCanvas,    
+      Ycoords: 403,
+      Xcoords: 200,
+      Yscale : 0.3,
+      Xscale : 0.3,
+      SpinRotation: 0,
+      LineWidth: 20,
+      StrokeColour: "#000000",
+      DashInput: "",
+      Fill: "#ffffff",
+      ZLayer: 0,    
+      Path: null
+  },
 
 }
+*/
+
+  let HeadAsset = {
+      Canvas: Head,
+      CanvasElement: HeadCanvas,
+      Ycoords: 400,
+      Xcoords: 50,
+      Yscale : 0.3,
+      Xscale : 0.3,
+      SpinRotation: 0,
+      LineWidth: 20,
+      StrokeColour: "#000000",
+      DashInput: "",
+      Fill: "#ffffff",
+      ZLayer: 0,
+      Path: null
+  }
+
+  let NeckAsset = {
+      Canvas: Neck,
+      CanvasElement: NeckCanvas,      
+      Ycoords: 433,
+      Xcoords: 170,
+      Yscale : 0.3,
+      Xscale : 0.3,
+      SpinRotation: 0,
+      LineWidth: 20,
+      StrokeColour: "#000000",
+      DashInput: "",
+      Fill: "#ffffff",
+      ZLayer: 0,    
+      Path: null
+  }
+
+  let TorsoAsset = {
+      Canvas: Torso,
+      CanvasElement: TorsoCanvas,    
+      Ycoords: 403,
+      Xcoords: 200,
+      Yscale : 0.3,
+      Xscale : 0.3,
+      SpinRotation: 0,
+      LineWidth: 20,
+      StrokeColour: "#000000",
+      DashInput: "",
+      Fill: "#ffffff",
+      ZLayer: 0,    
+      Path: null
+  }
+
+  let ItemTypeVariable = {
+      Head:  HeadAsset,
+      Neck:  NeckAsset,
+      Torso: TorsoAsset,
+  }
 
 let LatestPath
 let LatestCanvas
@@ -183,16 +177,47 @@ let LatestCtx
 
 let CurrentItemTypeVariable
 
+///////////////////////////////////////////Here we fix Different Views///////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+const LeftViewButton  = document.getElementById("RotateButtonLeft");
+const RightViewButton = document.getElementById("RotateButtonRight");
+
+const ViewArray = ["FrontView","LeftQuaterFrontView","LeftSideView","LeftQuaterBackView","Backview","RightQuaterBackView","RightSideView","RightQuaterFrontView"]
+let ViewNumber = 0;
+
+function ChangeView(Orientation) {
+    if (Orientation == "Left") {
+        if (ViewNumber == 7) {
+            ViewNumber = 0;
+        } else {
+            ViewNumber++
+        }
+    } else if (Orientation == "Right") {
+        if (ViewNumber == 0) {
+            ViewNumber = 7;
+        } else {
+            ViewNumber--
+        }
+    }
+
+    View = ViewArray[ViewNumber];
+    console.log(View);
+    
+}
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
 AssetButtons.forEach(AssetButtons => {
     AssetButtons.addEventListener("click", () => {
         Catergory = "BodyLimbs";
         ItemTypeString  = AssetButtons.getAttribute("title")
 
         CurrentItemTypeVariable = ItemTypeVariable[ItemTypeString]
-        console.log(ItemTypeString)
-        console.log(CurrentItemTypeVariable)
-
-        console.log(ItemTypeVariable[ItemTypeString].Canvas)
 
         LoadAssets();
   })
@@ -201,9 +226,23 @@ AssetButtons.forEach(AssetButtons => {
 async function LoadAssets() {
   let response = await fetch("CharacterCreator.json")
   let assets = await response.json();
-  let AssetArray = (assets[View][Catergory][ItemTypeString]);
-  AddAssetsToDiv(AssetArray);
+  let AssetArray = (assets[Catergory][ItemTypeString]);
+
+  // console.log(assets.BodyLimbs.Head[0].FrontView.FilePath);
   
+  /*
+  console.log(assets)
+  console.log(Catergory);
+  console.log(ItemTypeString);
+  console.log(View);                // SMT IS WRONG WITH VIEW. IDKKKKKKKKK
+
+
+
+// lol I don't need this???  let AssetArray = (assets[Catergory][ItemTypeString][View]);           //this MAY be broken. Since I changed the view. It used to be View, Catergory, Type. But now View is INSIDE Type.   /// wait. WHY do I have this as an array??? /// oh is to save the vategory things maybe??
+ */
+
+  AddAssetsToDiv(AssetArray);
+
 };
 
 function AddAssetsToDiv (AssetLocation){
@@ -212,8 +251,10 @@ function AddAssetsToDiv (AssetLocation){
     let ParaText = document.createElement("p")
     ParaText.classList.add("PText");
     AssetDiv.appendChild(ParaText);
-    const node = document.createTextNode(" This is AssetButtonDiv . Here I will have all the assets buttons spawn");
+    const node = document.createTextNode(" This is AssetButtonDiv . Here I will have all the "+ ItemTypeString +" assets buttons spawn");
     ParaText.appendChild(node);
+
+    // make sure all the values are correct or smt yea
 
     AssetYcoords.value = ItemTypeVariable[ItemTypeString].Ycoords;
     DefaultValues.Ycoords = AssetYcoords.value;
@@ -237,8 +278,12 @@ function AddAssetsToDiv (AssetLocation){
     AssetZLayer.value = ItemTypeVariable[ItemTypeString].ZLayer;
     DefaultValues.ZLayer = AssetZLayer.value;       
 
+    // endy end of that
+
     AssetLocation.forEach(Asset => {
-        AssetFilePath = Asset.FilePath;
+        console.log(Asset[View].FilePath);
+        
+        AssetFilePath = Asset[View].FilePath;
         AssetFilePathURL = ("url('"+AssetFilePath+"')");
       
         let Btn  = document.createElement("button");
@@ -248,10 +293,19 @@ function AddAssetsToDiv (AssetLocation){
         Btn.style.backgroundImage = [AssetFilePathURL];
         Btn.title = Asset.Name;
               Btn.addEventListener("click", () => {
-                Path = Asset.d;
-                DrawOnCanvas(Path, ItemTypeVariable[ItemTypeString].Canvas, ItemTypeVariable[ItemTypeString])
+                GetSVGPathAndDraw(AssetFilePath)
            })
       });
+};
+
+async function GetSVGPathAndDraw() {
+    const resp = await fetch('/Body/Head.svg');
+    const parser = new DOMParser();
+    const svg = parser.parseFromString(await resp.text(), 'image/svg+xml');
+    const path = svg.querySelector('path');
+    const d = path.getAttribute('d');
+
+    DrawOnCanvas(d, ItemTypeVariable[ItemTypeString].Canvas, ItemTypeVariable[ItemTypeString])
 };
 
 //////////////////////// !!!!!!!!!!!! CHANGE THE ZLAY ON EVERYTHING. Put all the things like the background, text, buttons, ext, on like Zlayer -1000 or smt crazy. SO the user can use -zlayer numbers without the asset going behind ui things
@@ -312,7 +366,6 @@ AssetSpinRotation.addEventListener("input", () => {
   
   DrawOnCanvas(ItemTypeVariable[ItemTypeString].Path, ItemTypeVariable[ItemTypeString].Canvas, ItemTypeVariable[ItemTypeString])
 })
-
 
 AssetLineWidth.addEventListener("input", () => {
   console.log("Hello u changed AssetLineWidth");
@@ -439,3 +492,56 @@ function SaveAllImg() {
   createEl.click();
   createEl.remove();
 }
+
+
+
+
+//////////////////////////////////////
+//////////////////////
+///////////////////////
+///////////////
+///////////
+//////////////////////
+///////////////////////
+///////////////
+///////////
+
+const ButtonDivParent    = document.getElementById("ButtonDivParent");
+const Buttons        = document.querySelectorAll("button");
+const BackBtn        = document.getElementById("GoBackButton");
+const SaveBtn        = document.getElementById("SaveButton")
+const DwlAllCanvas   = document.getElementById("DownloadAllCanvas")
+const ItemSettingBtn = document.getElementById("ItemSettingsButton");
+let CurrentPage      = document.getElementById("MainPage");   
+let DestinationPage;                                      
+let ParentPageTree  = [];
+
+Buttons.forEach(Buttons => {
+  Buttons.addEventListener("click", () => {   
+    if (Buttons == BackBtn) {                         
+      if (ParentPageTree[0] == null) {} else {            
+        ParentPageTree[0].style.display="Inline-block"    
+        CurrentPage.style.display="none"                  
+        CurrentPage = ParentPageTree[0];                  
+        ParentPageTree.shift();                           
+      }
+    } else if (Buttons == SaveBtn) {
+      console.log("TRYING TO SAVE AN IMAGE HUH??")
+      SaveImg()
+    } else if (Buttons == DwlAllCanvas) {
+      SaveAllImg()
+    } else if (Buttons == LeftViewButton) {
+        ChangeView("Left")
+    } else if (Buttons == RightViewButton) {
+        ChangeView("Right")
+    } else {
+        CurrentPage.style.display="none"                                        
+        let DestinationPageString = Buttons.getAttribute("data-GoToPage");      
+        DestinationPage = document.getElementById(DestinationPageString);     
+        ParentPageTree.unshift(CurrentPage);                                  
+        CurrentPage = DestinationPage;                                        
+        CurrentPage.style.display="Inline-block";                             
+        DestinationPage = null;                               
+    }
+  })
+});
