@@ -92,8 +92,8 @@ body {
 
 .Button {
     margin: 2%;
-    height: 200px;
-    width: 200px;
+    height: 140px;
+    width: 140px;
     background-size: contain;
 
     border: 5px var(--DarkSecondary) solid;
@@ -161,8 +161,9 @@ body {
     border-radius: var(--SuperSoftBorder);
     background-color: var(--NeutralLight);
 
-    width: 93vw;
+    width: 90vw;
     margin: 1vw;
+
 }
 
 .MainWindow {
