@@ -1,32 +1,132 @@
 {
-    "FrontView": {
         "BodyLimbs": {
             "Head": [
-                {"Number":"0",  "FilePath":"Body/Head.svg",              "Name":"Basic Head",      "Tag":"Basic",    "d":"M178.575 437.634C107.13 437.403 63.55 390.605 41.7823 358.571C12.3914 291.06 -24.8931 174.77 22.9174 83.2807C55.2876 33.7251 88.9545 4.67258 178.267 0C267.586 4.54687 301.293 33.0905 333.733 82.6005C381.672 174.023 344.551 290.365 315.256 357.917C293.533 389.982 250.02 437.303 178.575 437.634Z"},
-                {"Number":"1",  "FilePath":"Body/Head.svg",              "Name":"Sketchy Head",    "Tag":"Sketch",   "d":"M178.575 437.634C107.13 437.403 63.55 390.605 41.7823 358.571C12.3914 296.06 24.8931 174.77 12.9174 83.07C55.2876 33.7251 98.9545 4.67258 178.267 0C267.586 4.54687 301.293 33.0905 383.733 82.6005C381.672 14.023 344.551 290.365 315.256 357.917C293.533 289.982 25 437.3 178.575 637.634Z"},
-                {"Number":"2",  "FilePath":"Body/Green Music Note.png",  "Name":"Basic Head.v2",   "Tag":"Basic"},
-                {"Number":"3",  "FilePath":"Body/Head.svg",              "Name":"Realistic Head",  "Tag":"Realistic"}
+                {"Number":"0",  "Name":"Basic Head",      "Tag":"Basic",
+                    "FrontView": {
+                        "FilePath":"Body/Head.svg"
+                    },
+                    "LeftQuaterFrontView": {
+                        "FilePath":"Body/Head.svg"
+                    },
+                    "LeftSideView": {
+                        "FilePath":"Body/Head.svg"
+                    },
+                    "LeftQuaterBackView": {
+                        "FilePath":"Body/Head.svg"
+                    },
+                    "Backview": {
+                        "FilePath":"Body/Head.svg"
+                    },
+                    "RightQuaterBackView": {
+                        "FilePath":"Body/Head.svg"
+                    },
+                    "RightSideView": {
+                        "FilePath":"Body/Head.svg"
+                    },
+                    "RightQuaterFrontView": {
+                        "FilePath":"Body/Head.svg"
+                    }                             
+                },
+
+                {"Number":"1",  "Name":"Cool Head",      "Tag":"Cool",
+                    "FrontView": {
+                        "FilePath":"Body/Head.svg"
+                    },
+                    "LeftQuaterFrontView": {
+                        "FilePath":"Body/Head.svg"
+                    },
+                    "LeftSideView": {
+                        "FilePath":"Body/Head.svg"
+                    },
+                    "LeftQuaterBackView": {
+                        "FilePath":"Body/Head.svg"
+                    },
+                    "Backview": {
+                        "FilePath":"Body/Head.svg"
+                    },
+                    "RightQuaterBackView": {
+                        "FilePath":"Body/Head.svg"
+                    },
+                    "RightSideView": {
+                        "FilePath":"Body/Head.svg"
+                    },
+                    "RightQuaterFrontView": {
+                        "FilePath":"Body/Head.svg"
+                    }                             
+                },
+
+                {"Number":"2",  "Name":"Realistic Head",      "Tag":"Realistic",
+                    "FrontView": {
+                        "FilePath":"Body/Head.svg"
+                    },
+                    "LeftQuaterFrontView": {
+                        "FilePath":"Body/Head.svg"
+                    },
+                    "LeftSideView": {
+                        "FilePath":"Body/Head.svg"
+                    },
+                    "LeftQuaterBackView": {
+                        "FilePath":"Body/Head.svg"
+                    },
+                    "Backview": {
+                        "FilePath":"Body/Head.svg"
+                    },
+                    "RightQuaterBackView": {
+                        "FilePath":"Body/Head.svg"
+                    },
+                    "RightSideView": {
+                        "FilePath":"Body/Head.svg"
+                    },
+                    "RightQuaterFrontView": {
+                        "FilePath":"Body/Head.svg"
+                    }                             
+                }           
             ],
 
             "Neck": [
-                {"Number":"0",  "FilePath":"Body/Neck.svg",              "Name":"Basic Neck",      "Tag":"Basic",    "d":"M16.4309 0.5C16.6578 21.7463 17.8163 33.9561 17.2511 48.2068C23.5348 67.7119 3.69776 97.3171 0.0266716 109.109C-1.25603 136.831 44.0294 173.621 70.6453 171.453C97.2612 173.621 140.077 136.331 138.795 108.609C135.124 96.8171 115.287 67.2119 121.57 47.7068C121.005 33.4561 122.164 21.2463 122.391 0"},
-                {"Number":"1",  "FilePath":"Body/Neck.svg",              "Name":"Sketchy Neck",    "Tag":"Sketch",   "d":"M16.4309 0.5C16.6578 21.7463 17.8163 33.9561 17.2511 48.2068C23 67.7119 3.69776 127.3171 0.0266716 109.109C-1.25603 136.831 44.0294 133.621 20.6453 171.453C97.2612 173.621 140.077 131.331 138.795 108.609C135.124 96.8171 115.287 67.2119 121.57 47.7068C121.005 33 122.164 21.2463 122.391 0"},
-                {"Number":"2",  "FilePath":"Body/Green Music Note.png",  "Name":"Basic Neck.v2",   "Tag":"Basic"},
-                {"Number":"3",  "FilePath":"Body/Neck.svg",              "Name":"Realistic Neck",  "Tag":"Realistic"}
+                {"Number":"0",  "FilePath":"/Body/Neck.svg",              "Name":"Basic Neck",      "Tag":"Basic",    "d":"M16.4309 0.5C16.6578 21.7463 17.8163 33.9561 17.2511 48.2068C23.5348 67.7119 3.69776 97.3171 0.0266716 109.109C-1.25603 136.831 44.0294 173.621 70.6453 171.453C97.2612 173.621 140.077 136.331 138.795 108.609C135.124 96.8171 115.287 67.2119 121.57 47.7068C121.005 33.4561 122.164 21.2463 122.391 0"},
+                {"Number":"1",  "FilePath":"/Body/Neck.svg",              "Name":"Sketchy Neck",    "Tag":"Sketch",   "d":"M16.4309 0.5C16.6578 21.7463 17.8163 33.9561 17.2511 48.2068C23 67.7119 3.69776 127.3171 0.0266716 109.109C-1.25603 136.831 44.0294 133.621 20.6453 171.453C97.2612 173.621 140.077 131.331 138.795 108.609C135.124 96.8171 115.287 67.2119 121.57 47.7068C121.005 33 122.164 21.2463 122.391 0"},
+                {"Number":"2",  "FilePath":"/Body/Green Music Note.png",  "Name":"Basic Neck.v2",   "Tag":"Basic"},
+                {"Number":"3",  "FilePath":"/Body/Neck.svg",              "Name":"Realistic Neck",  "Tag":"Realistic"}
             ],
 
             "Torso": [
-                {"Number":"0",  "FilePath":"Body/Torso.svg",             "Name":"Basic Torso",      "Tag":"Basic",    "d":"M170.934 624.578C94.8151 611.762 20.6864 531.98 0.112978 470.567C-0.876723 439.749 4.60218 392.907 17.8842 327.109C14.3122 237.965 8.65618 59.9362 24.7193 27.027C56.1078 -4.80797 135.397 -0.00692735 167.466 1.1742C199.528 -0.185292 282.991 -5.44351 314.556 26.2164C330.778 54.5917 326.126 235.205 323.06 326.256C336.708 391.979 342.448 438.79 341.629 469.613C321.398 531.139 246.98 611.339 170.934 624.578Z"},
-                {"Number":"1",  "FilePath":"Body/Torso.svg",             "Name":"Sketchy Torso",    "Tag":"Sketch",   "d":"M170.934 524.578C94.8151 611.762 20.6864 531.98 0.112978 270.567C-0.876723 439.749 10.60218 392.907 17.8842 317.109C14.3122 277.965 8.65618 59.9362 24.7193 27.027C56.1078 -4.80797 135.397 -0.00692735 127.466 1.174C199.528 0.185292 282.991 -5. 314.556 26.2164C330.778 54.5917 32.126 235.205 523.06 326.256C336.708 391.979 342.448 438.79 341.629 369.613C321.398 531.139 246.98 611.339 170.934 624.578Z"},
-                {"Number":"2",  "FilePath":"Body/Green Music Note.png",  "Name":"Basic Torso.v2",   "Tag":"Basic"},
-                {"Number":"3",  "FilePath":"Body/Torso.svg",             "Name":"Realistic Torso",  "Tag":"Realistic"}
-            ],
-            "LeftEar": [
-                {"Number":"0",  "FilePath":"Body/Torso.svg",             "Name":"Basic Torso",      "Tag":"Basic",    "d":"M170.934 624.578C94.8151 611.762 20.6864 531.98 0.112978 470.567C-0.876723 439.749 4.60218 392.907 17.8842 327.109C14.3122 237.965 8.65618 59.9362 24.7193 27.027C56.1078 -4.80797 135.397 -0.00692735 167.466 1.1742C199.528 -0.185292 282.991 -5.44351 314.556 26.2164C330.778 54.5917 326.126 235.205 323.06 326.256C336.708 391.979 342.448 438.79 341.629 469.613C321.398 531.139 246.98 611.339 170.934 624.578Z"},
-                {"Number":"1",  "FilePath":"Body/Torso.svg",             "Name":"Sketchy Torso",    "Tag":"Sketch",   "d":"M170.934 524.578C94.8151 611.762 20.6864 531.98 0.112978 270.567C-0.876723 439.749 10.60218 392.907 17.8842 317.109C14.3122 277.965 8.65618 59.9362 24.7193 27.027C56.1078 -4.80797 135.397 -0.00692735 127.466 1.174C199.528 0.185292 282.991 -5. 314.556 26.2164C330.778 54.5917 32.126 235.205 523.06 326.256C336.708 391.979 342.448 438.79 341.629 369.613C321.398 531.139 246.98 611.339 170.934 624.578Z"},
-                {"Number":"2",  "FilePath":"Body/Green Music Note.png",  "Name":"Basic Torso.v2",   "Tag":"Basic"},
-                {"Number":"3",  "FilePath":"Body/Torso.svg",             "Name":"Realistic Torso",  "Tag":"Realistic"}
-            ]                 
+                {"Number":"0",  "FilePath":"/Body/Torso.svg",             "Name":"Basic Torso",      "Tag":"Basic",    "d":"M170.934 624.578C94.8151 611.762 20.6864 531.98 0.112978 470.567C-0.876723 439.749 4.60218 392.907 17.8842 327.109C14.3122 237.965 8.65618 59.9362 24.7193 27.027C56.1078 -4.80797 135.397 -0.00692735 167.466 1.1742C199.528 -0.185292 282.991 -5.44351 314.556 26.2164C330.778 54.5917 326.126 235.205 323.06 326.256C336.708 391.979 342.448 438.79 341.629 469.613C321.398 531.139 246.98 611.339 170.934 624.578Z"},
+                {"Number":"1",  "FilePath":"/Body/Torso.svg",             "Name":"Sketchy Torso",    "Tag":"Sketch",   "d":"M170.934 524.578C94.8151 611.762 20.6864 531.98 0.112978 270.567C-0.876723 439.749 10.60218 392.907 17.8842 317.109C14.3122 277.965 8.65618 59.9362 24.7193 27.027C56.1078 -4.80797 135.397 -0.00692735 127.466 1.174C199.528 0.185292 282.991 -5. 314.556 26.2164C330.778 54.5917 32.126 235.205 523.06 326.256C336.708 391.979 342.448 438.79 341.629 369.613C321.398 531.139 246.98 611.339 170.934 624.578Z"},
+                {"Number":"2",  "FilePath":"/Body/Green Music Note.png",  "Name":"Basic Torso.v2",   "Tag":"Basic"},
+                {"Number":"3",  "FilePath":"/Body/Torso.svg",             "Name":"Realistic Torso",  "Tag":"Realistic"}
+            ]             
+        },
+
+        "Face": {
+            "Eyes": [
+                {"Number":"0",   "Name":"Basic Eyes",    "Tag":"Basic", 
+                    "FrontView": {
+                        "FilePath":"Body/Head.svg"
+                    },
+                    "LeftQuaterFrontView": {
+                        "FilePath":"Body/Head.svg"
+                    },
+                    "LeftSideView": {
+                        "FilePath":"Body/Head.svg"
+                    },
+                    "LeftQuaterBackView": {
+                        "FilePath":"Body/Head.svg"
+                    },
+                    "Backview": {
+                        "FilePath":"Body/Head.svg"
+                    },
+                    "RightQuaterBackView": {
+                        "FilePath":"Body/Head.svg"
+                    },
+                    "RightSideView": {
+                        "FilePath":"Body/Head.svg"
+                    },
+                    "RightQuaterFrontView": {
+                        "FilePath":"Body/Head.svg"
+                    }     
+                }
+            ]
+
         }
-    }
 }
