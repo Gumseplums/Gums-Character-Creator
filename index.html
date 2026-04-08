@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Character Creator</title>
 
-    <link rel="stylesheet" href="CharacterCreator.css">                          <!-- Code to link HTML to CSS code -->
+    <link rel="stylesheet" href="CC.css">                          <!-- Code to link HTML to CSS code -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jua">   <!-- Link to google font Jua  -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Itim">  <!-- Link to google font Itim -->
-    
+
 </head>
 <body>
     <section class="MainWindow Window" id="MainWindow">
         <p>This is the Main window</p>
+
+        <button class="RotateButton RotateButtonLeft"  id="RotateButtonLeft"  title="Left">=></button>
+        <button class="RotateButton RotateButtonRight" id="RotateButtonRight" title="Right"><=</button>
 
         <div id="HeadDIV" class="SVGDiv">  <!-- Head -->
             <canvas id="HeadCanvas"          class="Canvas" style="z-index: 0;"></canvas>          
@@ -64,7 +67,7 @@
 
             <div id="AboutTheWebsite" style="display: none;">
                 <p class="Ptext"> This is AboutTheWebsite</p>
-                <p>Lots of cool and interesting text about website. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore similique quaerat incidunt explicabo eaque perspiciatis ad consectetur, recusandae autem maxime perferendis magnam temporibus totam sapiente nemo corporis. Nemo, debitis iure.</p>
+                <p>Lots of cool and interesting text about website. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore similique quaerat incidunt explicabo eaque perspiciatis ad consectetur, recusandae autem maxime perferendis magnam temporibus totam sapiente nemo corporis. Nemo, debitis iure.<br><br>LATEST CHANGES:<br><br>07/04/2026<br> fiddled with the css and now it looks a little better on like, phones. and stuff.<br><br>08/04/2026<br>YEAYDHWEDIAYEGIYW I finally managed to get the Path from my svgs filepath. Now I no longer need to hard code it in. This changes nothing for you, the user. I've also tweaked the css a bit more. oh yea, I've decided to add a change log. Oh yeah, Since I've changed a lot of things, The only working asset is one head.</p>
             </div>
 
             <div id="SettingsAndOptions" style="display: none;">
@@ -76,7 +79,7 @@
 
             <div id="SupportMe" style="display: none;">
                 <p class="Ptext"> This is SupportMe</p>
-                                <p> blah blah balh</p>   
+                <p> blah blah balh</p>           
             </div>
 
 
@@ -123,13 +126,13 @@
             <div id="BodyLimbsDiv" style="display: none;"> <!-- BODY LIMBS AYAYAYA-->
                 <p class="Ptext"> This is BodyLimbs</p>
 
-                <button class="Button"  title="Head"  data-GoToPage="AssetButtonDiv"></button> <!-- Ok we gotta make it spawn options for the head. Ok. dw. we got this we got ittt.....-->
-                <button class="Button"  title="Neck"  data-GoToPage="AssetButtonDiv"></button>                
-                <button class="Button"  title="Torso" data-GoToPage="AssetButtonDiv"></button>
-                <button class="Button"  title="LeftEar"  data-GoToPage="AssetButtonDiv"></button>
-                <button class="Button"  title="Hands" data-GoToPage=" "></button>
-                <button class="Button"  title="Legs"  data-GoToPage=" "></button>
-                <button class="Button"  title="Feet"  data-GoToPage=" "></button>
+                <button class="Button"  title="Head"    data-GoToPage="AssetButtonDiv"></button> <!-- Ok we gotta make it spawn options for the head. Ok. dw. we got this we got ittt.....-->
+                <button class="Button"  title="Neck"    data-GoToPage="AssetButtonDiv"></button>                
+                <button class="Button"  title="Torso"   data-GoToPage="AssetButtonDiv"></button>
+                <button class="Button"  title="LeftEar" data-GoToPage="AssetButtonDiv"></button>
+                <button class="Button"  title="Hands"   data-GoToPage=" "></button>
+                <button class="Button"  title="Legs"    data-GoToPage=" "></button>
+                <button class="Button"  title="Feet"    data-GoToPage=" "></button>
 
             </div>
 
@@ -149,7 +152,7 @@
 
 </body>
 
-<script type="text/javascript" src="CharacterCreator.js"></script>
+<script type="text/javascript" src="DifferentVies.js"></script>
 
 </html>
 
