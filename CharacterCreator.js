@@ -1,3 +1,17 @@
+/*
+ok. We are rewriting the whole thing but we are gonna use OBJECTS.
+
+Now, this is quite a big task, but honestly, the logic works. I just gotta make it better
+You got this.
+I say we begin like how we wrote it.
+We do the Button Pages.
+And then we parse the js
+and then, we are ready to do the real fixing. 
+but
+for now?
+learn.
+*/
+
 const Buttons        = document.querySelectorAll("button");
 const BackBtn        = document.getElementById("GoBackButton");
 const SaveBtn        = document.getElementById("SaveButton")
@@ -33,11 +47,13 @@ Buttons.forEach(Buttons => {
   })
 });
 
+
 const CCBTN = document.getElementById("CCBTN")
 
 CCBTN.style.backgroundImage = "url('Body/Head.svg')";
 
 console.log(CCBTN)
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -55,8 +71,8 @@ const ImageTest          = document.getElementById("ImageTest");
 const BodyLimbs          = document.getElementById("BodyLimbsDiv");
 const AssetButtons       = BodyLimbs.querySelectorAll("button");        // This currently only works for BodyLimb Buttons
 
-CanvasHeight = 800;
-CanvasWidth  = 800;
+CanvasHeight = 2500;
+CanvasWidth  = 2000;
 
 const EveryCanvas   = document.getElementById("EverythingCanvas");
 const TheCanvas     = EveryCanvas.getContext("2d");
@@ -77,11 +93,6 @@ const TorsoCanvas   = document.getElementById("TorsoCanvas");
 const Torso         = TorsoCanvas.getContext("2d");
 TorsoCanvas.height  = CanvasHeight;
 TorsoCanvas.width   = CanvasWidth;
-
-const LeftEarCanvas   = document.getElementById("LeftEarCanvas");
-const LeftEar         = LeftEarCanvas.getContext("2d");
-LeftEarCanvas.height  = CanvasHeight;
-LeftEarCanvas.width   = CanvasWidth;
 
 
 let AssetYcoords       = document.getElementById("Ycoords")
@@ -159,27 +170,11 @@ let TorsoAsset = {
 }
 
 
-let LeftEarAsset = {
-    Canvas: LeftEar,
-    CanvasElement: LeftEarCanvas,    
-    Ycoords: 403,
-    Xcoords: 170,
-    Yscale : 0.3,
-    Xscale : 0.3,
-    SpinRotation: 0,
-    LineWidth: 20,
-    StrokeColour: "#000000",
-    DashInput: "",
-    Fill: "#ffffff",
-    ZLayer: 0,        
-    Path: null
-}
-
 let ItemTypeVariable = {
     Head:  HeadAsset,
     Neck:  NeckAsset,
     Torso: TorsoAsset,
-    LeftEar: LeftEarAsset,
+
 }
 
 let LatestPath
@@ -244,13 +239,13 @@ function AddAssetsToDiv (AssetLocation){
 
     AssetLocation.forEach(Asset => {
         AssetFilePath = Asset.FilePath;
-        AssetFilePathURL = ("url('"+AssetFilePath+"')"); 
-
+        AssetFilePathURL = ("url('"+AssetFilePath+"')");
+      
         let Btn  = document.createElement("button");
         AssetDiv.appendChild(Btn);
         Btn.classList.add("Button");
         Btn.classList.add(ItemTypeString);
-        Btn.style.backgroundImage = [AssetFilePath];
+        Btn.style.backgroundImage = [AssetFilePathURL];
         Btn.title = Asset.Name;
               Btn.addEventListener("click", () => {
                 Path = Asset.d;
@@ -259,7 +254,7 @@ function AddAssetsToDiv (AssetLocation){
       });
 };
 
-
+//////////////////////// !!!!!!!!!!!! CHANGE THE ZLAY ON EVERYTHING. Put all the things like the background, text, buttons, ext, on like Zlayer -1000 or smt crazy. SO the user can use -zlayer numbers without the asset going behind ui things
 
 ///// here are the input functions
 
@@ -420,8 +415,8 @@ function SaveImg() {
     const createEl = document.createElement("a");
     createEl.href = CanvasUrl;
 
-    createEl.download = "download-this-canvas";
-
+    createEl.download = (ItemTypeString); //name for file
+    
     createEl.click();
     createEl.remove();  
 }
@@ -439,9 +434,8 @@ function SaveAllImg() {
   const createEl = document.createElement('a');
   createEl.href = CanvasUrl;
 
-  createEl.download = "download-this-canvas";
+  createEl.download = "FullGumsCharacter";
 
   createEl.click();
   createEl.remove();
-
 }
