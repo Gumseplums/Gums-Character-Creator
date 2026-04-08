@@ -4,24 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Character Creator</title>
-    
-    <link rel="stylesheet" href="CharacterCreator.css">                          <!-- Code to link HTML to CSS code -->
+
+    <link rel="stylesheet" href="CC.css">                          <!-- Code to link HTML to CSS code -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jua">   <!-- Link to google font Jua  -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Itim">  <!-- Link to google font Itim -->
 
 </head>
 <body>
-
     <section class="MainWindow Window" id="MainWindow">
         <p>This is the Main window</p>
 
         <div id="HeadDIV" class="SVGDiv">  <!-- Head -->
-            <canvas id="HeadCanvas"          class="Canvas" style="z-index: 0;"></canvas>
-            <canvas id="LeftEarCanvas"       class="Canvas" style="z-index: 0;"></canvas>
-            <canvas id="RightEarCanvas"      class="Canvas" style="z-index: 0;"></canvas>            
+            <canvas id="HeadCanvas"          class="Canvas" style="z-index: 0;"></canvas>          
             <canvas id="NeckCanvas"          class="Canvas" style="z-index: 0;"></canvas>                   
             <canvas id="TorsoCanvas"         class="Canvas" style="z-index: 0;"></canvas>
-            <canvas id="LeftShoulderCanvas"  class="Canvas" style="z-index: 0;"></canvas>
+        <!--    <canvas id="LeftShoulderCanvas"  class="Canvas" style="z-index: 0;"></canvas>
+            <canvas id="LeftEarCanvas"       class="Canvas" style="z-index: 0;"></canvas>
+            <canvas id="RightEarCanvas"      class="Canvas" style="z-index: 0;"></canvas>              
             <canvas id="RightShoulderCanvas" class="Canvas" style="z-index: 0;"></canvas>
             <canvas id="LeftArmCanvas"       class="Canvas" style="z-index: 0;"></canvas>
             <canvas id="RightArmCanvas"      class="Canvas" style="z-index: 0;"></canvas>
@@ -32,10 +31,10 @@
             <canvas id="LeftLegCanvas"       class="Canvas" style="z-index: 0;"></canvas>
             <canvas id="RightLegCanvas"      class="Canvas" style="z-index: 0;"></canvas>
             <canvas id="LeftFootCanvas"      class="Canvas" style="z-index: 0;"></canvas>
-            <canvas id="RightFootCanvas"     class="Canvas" style="z-index: 0;"></canvas>
+            <canvas id="RightFootCanvas"     class="Canvas" style="z-index: 0;"></canvas> -->
                                                     
 
-            <canvas id="EverythingCanvas"  class="Canvas"></canvas>
+            <canvas id="EverythingCanvas"  class="Canvas" style="display: none;"></canvas>
         </div>
 
     </section>
@@ -72,7 +71,7 @@
                 <p class="Ptext"> This is SettingsAndOptions</p>
                 <p> Here are a bunch of settings and options and even some tips! Like did you know you can quickly go back by pressing "Alt + B"? Do you think that's a horrible and disgusting keybind? Well then, a bit of an overreaction, BUT! You can change it(I lied. You can't. I haven't added that feature yet.). There is also " ALt + C" to quickly get to character Creator page. There's even " Alt + m " for main menu :></p>                
             
-                <button class="Button" title="Expert Settings"    data-GoToPage="SVGSettingsComplex"></button>            
+                <button class="Button" title="Expert Settings"    data-GoToPage="SVGSettings"></button>            
             </div>             
 
             <div id="SupportMe" style="display: none;">
@@ -81,14 +80,25 @@
             </div>
 
 
-            <div id="SVGSettingsComplex" style="display: none;">
-                <p class="Ptext"> This is SVGSettings</p>
-                <h4>Outline Settings</h4>
-                <p> Outline Thickness</p>
-                <input type="number" min="0" max="150" value="20"    id="ThicknessInput" class="ThicknessInput">
+            <div id="SVGSettings" style="display: none;">
+                <h4 class="OutlineSettingsText">Outline Settings</h4>
+                <p class="DefaultSettingsText OutlineThicknessText"> Outline Thickness</p>
+                <input type="number" min="0" value="20"    id="ThicknessInput" class="ThicknessInput DefaultSettings">
 
-                <p>Dashed Line</p>
-                <input type="text" placeholder="20 50 100 ..."    id="DashedLines">
+                <p class="DefaultSettingsText DashedLinesText">Dashed Line</p>
+                <input type="text" placeholder="20 50 100 ..."    id="DashedLines" class="DashedLines DefaultSettings">
+
+                <h4 class="DefaultSettingsText TransfromText">Transfrom</h4>
+                <p>Coords</p>
+                <input type="number" value="400" step="10"    placeholder="Y coordinate value"     id="Ycoords">
+                <input type="number" value="50"  step="10"    placeholder="X coordinate value"     id="Xcoords">
+
+                <p>Scale</p>
+                <input type="number" value="0.3"  step="0.01"   placeholder="Y scale value"    id="Yscale">
+                <input type="number" value="0.3"  step="0.01"   placeholder="X scale value"    id="Xscale">
+
+                <p>Rotation</p>
+                <input type="number" step="1"   placeholder="Rotation value (Weird to use)"    id="SpinRotation">
 
                 <p>Outline colour</p>
                 <input type="color"  value="#000000"     id="OutlineColour">
@@ -101,17 +111,6 @@
                 <p>Colour three</p>
                 <input type="color"  value="#5865f2">
                 
-                <h4>Transfrom</h4>
-                <p>Coords</p>
-                <input type="number" value="400" step="10"    placeholder="Y coordinate value"     id="Ycoords">
-                <input type="number" value="50"  step="10"    placeholder="X coordinate value"     id="Xcoords">
-
-                <p>Scale</p>
-                <input type="number" value="0.3"  step="0.01"   placeholder="Y scale value"    id="Yscale">
-                <input type="number" value="0.3"  step="0.01"   placeholder="X scale value"    id="Xscale">
-
-                <p>Rotation</p>
-                <input type="number" step="1"   placeholder="Rotation value (Weird to use)"    id="SpinRotation">
 
                 <p>Layer</p>
                 <input type="number" step="1"   placeholder="Which should be shown first" value="0" id="ZLayer">
@@ -139,15 +138,19 @@
             </div>
         </div> <!---------------------------------------------------------------- THIS IS THE END OF THE BUTTONS DIV ---------------------------------------------------------------->
         <div class="PrimaryButtonsDiv">
-                <button class="PrimaryButton" title="Advanced Levels"></button>
+                <button class="PrimaryButton" title="General Settings">canvas size?</button>
                 <button class="PrimaryButton" title="Download Asset" id="DownloadAllCanvas">download</button>
-                <button class="PrimaryButton" title="Item settings" data-GoToPage="SVGSettingsComplex" id="ItemSettingsButton">item settings</button>
+                <button class="PrimaryButton" title="Item settings" data-GoToPage="SVGSettings" id="ItemSettingsButton">item settings</button>
                 <button class="PrimaryButton" title="Go Back"       accesskey="b" id="GoBackButton">go back</button>
         </div>
 
+        <p style="position:absolute; bottom: 10vh; font-family:Arial, Helvetica, sans-serif; font-size: 1vh; margin: 1vw;">Version: 0.0.0 --- Latest meaningful change: make styling work with different devices such as mobile</p>
     </section>
+
 </body>
 
 <script type="text/javascript" src="CharacterCreator.js"></script>
 
 </html>
+
+<!-- make another "Sister" website to add simple animations to it. Ie, walking, attacking, ect. This is for the gamedevelopers. License will be they may use it freely for personal work. Maybe a small hit of money if they publish it and it grows big. Credit is always required tho.-->
