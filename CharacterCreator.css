@@ -1,46 +1,79 @@
-body {
-    background-color: var(--Background);
-
-    position: relative;
-
-/*    overflow: hidden; */
-}
-
-/* ------------------------------------------------------------------------ */
-
 :root {
-    --Background:      #7534b3;
-    --DarkOutline:     #0f1275;
-    --MainBackground:  #b1d5f7;
+    --DarkMain:       #780aac;
+    --DarkSecondary:  #001261;
+
+    --NeutralMain:      #a636da;
+    --NeutralSecondary: #1d4dd1;
+
+    --LightMain:      #d694f5;
+    --LightSecondary: #8aaaff;
+
+    --NeutralLight:  #e8ebf1;
+    --NeutralDark:   #0f0114;
+
+    --HardBorder:      5px;
+    --SoftBorder:      20px;
+    --SuperSoftBorder: 50px;
 }
 
-/* ------------------------------------------------------------------------ */
+body {
+    background-image: linear-gradient(165deg, var(--DarkMain)0%, var(--DarkSecondary)150%);
+    overflow: auto; /*change to hidden to get rid of scroll*/
+    position: sticky;
+
+    /* height: 100vh; */
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+
+    font-family: Jua;
+    font-weight: normal;
+}
+
+/* ************************************************************* */
+/* ///////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////// */
+/* ************************************************************* */
+
+
+@media (min-width: 1100px) {
+
+/* ************************************************************* */
+/* ///////////////////////////////////////////////////////////// */     /* Big thingies idk divs*/
+/* ************************************************************* */
 
 .Window {
-    position: absolute;
-    
-    border: 10px var(--DarkOutline) solid;
-    border-radius: 20px;
-    background-color: var(--MainBackground);
+    position:absolute;
+    border: 15px var(--DarkSecondary) solid;
+    border-radius: var(--SuperSoftBorder);
+    background-color: var(--NeutralLight);
 
-    height: 96vh;
+    height: 91vh;
+    margin: 1vw;
 }
 
-.PText {
-    text-align: center;
-}
-
-.MainWindow {   
+.MainWindow {  
     left: 0;
-    right: 36%;
+    right: 34%;
 }
 
-.ButtonWindow {   
+.ButtonWindow {    
     right: 0px;
     left: 65%;
 }
 
-/*Buttons*/
+.PrimaryButtonsDiv {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+
+    background-color: var(--DarkSecondary);      
+
+    height: 6vw;
+    width: 100.4%;
+    bottom: -1px;
+    left: -1px;
+}
 
 .ButtonsDiv {
     position: absolute;
@@ -48,15 +81,23 @@ body {
     text-align: center;
 
     width: 100%;    
-    height: 80vh;
+    height: 85vh;
     overflow:auto;  
 }
 
+/* ************************************************************* */
+/* ///////////////////////////////////////////////////////////// */     /* Buttonzzzz */
+/* ************************************************************* */
+
+
 .Button {
     margin: 2%;
-    height: 120px;
-    width: 120px;
+    height: 200px;
+    width: 200px;
     background-size: contain;
+
+    border: 5px var(--DarkSecondary) solid;
+    border-radius: var(--SoftBorder);
 }
 
 .Button:hover {
@@ -69,26 +110,15 @@ body {
     animation-iteration-count: infinite    
 }
 
-/*Extra Buttons*/
-
-.PrimaryButtonsDiv {
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    
-
-    background-color: var(--DarkOutline);      
-
-    height: 10%;
-    width: 100%;
-    bottom: 0;  
-}
-
 .PrimaryButton {
-    margin: 2%;
-    height: 80px;
-    width: 80px;
-    object-fit: contain;
+    height: 5vw;
+    width: 5vw;
+
+    margin: 2% 5% 0% 5%;    
+    object-fit: contain;  
+
+    border: 5px var(--DarkSecondary) solid;
+    border-radius: var(--SoftBorder);    
 
 }
 
@@ -100,65 +130,153 @@ body {
     animation-iteration-count: infinite
 }
 
-/*  Styles for the customization things    */
 
-.ThicknessSlider {
-    appearance: none;
-    width: 90%;
-    height: 20px;
-
-    outline: 5px #0d0e6e solid;
-    border-radius: 20px;
-    background-color: rgb(110, 153, 235)
-}
-
-.ThicknessSlider::-webkit-slider-thumb {
-    appearance: none;
-
-    width: 18px;
-    height: 18px;
-
-    cursor:pointer;
-
-    background: #0d0e6e;
-    border-radius: 20px;
-  
-}
-
-/* Styles for the different things canvases */
-
-.Head {
-
-    background-size: 250%;
-    background-position-x: 50%;
-    background-position-y: 4%;
-}
-
-.Torso {
-
-    background-size: 200%;
-    background-position-x: 50%;
-    background-position-y: 43%;
-}
+/* ************************************************************* */
+/* ///////////////////////////////////////////////////////////// */     /* Canvas */
+/* ************************************************************* */
 
 .Canvas {
     border: 2px solid rgb(255, 0, 0);
-
     position: absolute;
+
+    width: 100%;
+    height: auto;
 }
+
+}
+
+/* ************************************************************* */
+/* ///////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////// */
+/* ************************************************************* */
+
+
+@media (max-width: 1099px) {
+
+
+.Window {
+    position:absolute;
+    border: 15px var(--DarkSecondary) solid;
+    border-radius: var(--SuperSoftBorder);
+    background-color: var(--NeutralLight);
+
+    width: 93vw;
+    margin: 1vw;
+}
+
+.MainWindow {
+    top: 0;
+    bottom: -60vh;
+}
+
+.ButtonWindow {
+    top: 60vh;
+    bottom: -98vh;
+}
+
+.PrimaryButtonsDiv {
+    position: absolute;
+    display:flexbox;
+    text-align: center;
+
+    background-color: var(--DarkSecondary);      
+
+    height: 15vw;
+    width: 100.5%;
+    bottom: -1px;
+    left: -1px;
+
+    border: 2px red solid;
+}
+
+.ButtonsDiv {
+    position: absolute;
+    display: grid;
+    text-align: center;
+
+    width: 100%;    
+    height: 30vh;
+    overflow:auto;
+}
+
+/* ************************************************************* */
+/* ///////////////////////////////////////////////////////////// */     /* Buttonzzzz */
+/* ************************************************************* */
+
+
+.Button {
+    margin: 2%;
+    height: 150px;
+    width: 150px;
+    background-size: contain;
+
+    border: 5px var(--DarkSecondary) solid;
+    border-radius: var(--SoftBorder);
+}
+
+.Button:hover {
+    transform: scale(1.05);
+
+    cursor: pointer;
+
+    animation-name: ButtonHover;
+    animation-duration: 5s;
+    animation-iteration-count: infinite    
+}
+
+.PrimaryButton {
+    height: 12vw;
+    width: 12vw;
+
+    margin: 2% 5% 0% 5%;    
+    object-fit: contain;
+
+    border: 5px var(--DarkSecondary) solid;
+    border-radius: var(--SoftBorder);   
+}
+
+.PrimaryButton:hover {
+    transform: scale(1.05);
+
+    animation-name: Wiggle;
+    animation-duration: 2s;
+    animation-iteration-count: infinite
+}
+
+
+/* ************************************************************* */
+/* ///////////////////////////////////////////////////////////// */     /* Canvas */
+/* ************************************************************* */
+
+.Canvas {
+    border: 2px solid rgb(255, 0, 0);
+    position: absolute;
+
+    width: 100%;
+    height: auto;
+}
+
+}
+
 
 
 /*Animations*/
 
 @keyframes Wiggle {
-  0%   {transform: rotate(0deg)}
-  25%  {transform: rotate(-4deg)}
-  75%  {transform: rotate(4deg)}
-  100% {transform: rotate(0deg)}    
+  0%    {transform: rotate(-4deg)}
+  50%   {transform: rotate(4deg)}
+  100%  {transform: rotate(-4deg)} 
 }
 
 @keyframes ButtonHover {
   1%    {transform: scale(1.05)}
   50%   {transform: scale(1.1)}
   100%  {transform: scale(1.05)}  
+}
+
+@keyframes Bop {
+  0%    {transform: translate(0px, 5px)}
+  50%   {transform: translate(0px, 0px)}
+  100%  {transform: translate(0px, 5px)}
 }
