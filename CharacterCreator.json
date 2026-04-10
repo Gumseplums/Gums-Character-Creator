@@ -6,10 +6,10 @@
                         "FilePath":"Body/Head.svg"
                     },
                     "LeftQuaterFrontView": {
-                        "FilePath":"Body/Head.svg"
+                        "FilePath":"Body/Neck.svg"
                     },
                     "LeftSideView": {
-                        "FilePath":"Body/Head.svg"
+                        "FilePath":"Body/Torso.svg"
                     },
                     "LeftQuaterBackView": {
                         "FilePath":"Body/Head.svg"
@@ -30,10 +30,10 @@
 
                 {"Number":"1",  "Name":"Cool Head",      "Tag":"Cool",
                     "FrontView": {
-                        "FilePath":"Body/Head.svg"
+                        "FilePath":"Body/Neck.svg"
                     },
                     "LeftQuaterFrontView": {
-                        "FilePath":"Body/Head.svg"
+                        "FilePath":"Body/Torso.svg"
                     },
                     "LeftSideView": {
                         "FilePath":"Body/Head.svg"
@@ -57,13 +57,13 @@
 
                 {"Number":"2",  "Name":"Realistic Head",      "Tag":"Realistic",
                     "FrontView": {
-                        "FilePath":"Body/Head.svg"
+                        "FilePath":"Body/Torso.svg"
                     },
                     "LeftQuaterFrontView": {
                         "FilePath":"Body/Head.svg"
                     },
                     "LeftSideView": {
-                        "FilePath":"Body/Head.svg"
+                        "FilePath":"Body/Neck.svg"
                     },
                     "LeftQuaterBackView": {
                         "FilePath":"Body/Head.svg"
@@ -84,10 +84,86 @@
             ],
 
             "Neck": [
-                {"Number":"0",  "FilePath":"/Body/Neck.svg",              "Name":"Basic Neck",      "Tag":"Basic",    "d":"M16.4309 0.5C16.6578 21.7463 17.8163 33.9561 17.2511 48.2068C23.5348 67.7119 3.69776 97.3171 0.0266716 109.109C-1.25603 136.831 44.0294 173.621 70.6453 171.453C97.2612 173.621 140.077 136.331 138.795 108.609C135.124 96.8171 115.287 67.2119 121.57 47.7068C121.005 33.4561 122.164 21.2463 122.391 0"},
-                {"Number":"1",  "FilePath":"/Body/Neck.svg",              "Name":"Sketchy Neck",    "Tag":"Sketch",   "d":"M16.4309 0.5C16.6578 21.7463 17.8163 33.9561 17.2511 48.2068C23 67.7119 3.69776 127.3171 0.0266716 109.109C-1.25603 136.831 44.0294 133.621 20.6453 171.453C97.2612 173.621 140.077 131.331 138.795 108.609C135.124 96.8171 115.287 67.2119 121.57 47.7068C121.005 33 122.164 21.2463 122.391 0"},
-                {"Number":"2",  "FilePath":"/Body/Green Music Note.png",  "Name":"Basic Neck.v2",   "Tag":"Basic"},
-                {"Number":"3",  "FilePath":"/Body/Neck.svg",              "Name":"Realistic Neck",  "Tag":"Realistic"}
+                {"Number":"0",  "Name":"Basic Head",      "Tag":"Basic",
+                    "FrontView": {
+                        "FilePath":"Body/Head.svg"
+                    },
+                    "LeftQuaterFrontView": {
+                        "FilePath":"Body/Neck.svg"
+                    },
+                    "LeftSideView": {
+                        "FilePath":"Body/Torso.svg"
+                    },
+                    "LeftQuaterBackView": {
+                        "FilePath":"Body/Head.svg"
+                    },
+                    "Backview": {
+                        "FilePath":"Body/Head.svg"
+                    },
+                    "RightQuaterBackView": {
+                        "FilePath":"Body/Head.svg"
+                    },
+                    "RightSideView": {
+                        "FilePath":"Body/Head.svg"
+                    },
+                    "RightQuaterFrontView": {
+                        "FilePath":"Body/Head.svg"
+                    }                             
+                },
+
+                {"Number":"1",  "Name":"Cool Head",      "Tag":"Cool",
+                    "FrontView": {
+                        "FilePath":"Body/Neck.svg"
+                    },
+                    "LeftQuaterFrontView": {
+                        "FilePath":"Body/Torso.svg"
+                    },
+                    "LeftSideView": {
+                        "FilePath":"Body/Head.svg"
+                    },
+                    "LeftQuaterBackView": {
+                        "FilePath":"Body/Head.svg"
+                    },
+                    "Backview": {
+                        "FilePath":"Body/Head.svg"
+                    },
+                    "RightQuaterBackView": {
+                        "FilePath":"Body/Head.svg"
+                    },
+                    "RightSideView": {
+                        "FilePath":"Body/Head.svg"
+                    },
+                    "RightQuaterFrontView": {
+                        "FilePath":"Body/Head.svg"
+                    }                             
+                },
+
+                {"Number":"2",  "Name":"Realistic Head",      "Tag":"Realistic",
+                    "FrontView": {
+                        "FilePath":"Body/Torso.svg"
+                    },
+                    "LeftQuaterFrontView": {
+                        "FilePath":"Body/Head.svg"
+                    },
+                    "LeftSideView": {
+                        "FilePath":"Body/Neck.svg"
+                    },
+                    "LeftQuaterBackView": {
+                        "FilePath":"Body/Head.svg"
+                    },
+                    "Backview": {
+                        "FilePath":"Body/Head.svg"
+                    },
+                    "RightQuaterBackView": {
+                        "FilePath":"Body/Head.svg"
+                    },
+                    "RightSideView": {
+                        "FilePath":"Body/Head.svg"
+                    },
+                    "RightQuaterFrontView": {
+                        "FilePath":"Body/Head.svg"
+                    }                             
+                }           
             ],
 
             "Torso": [
