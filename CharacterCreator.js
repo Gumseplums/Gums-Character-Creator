@@ -201,9 +201,10 @@ function ChangeView(Orientation) {
         }
     }
 
+
+
     View = ViewArray[ViewNumber];
     console.log(View);
-    
 }
 
 
@@ -227,19 +228,6 @@ async function LoadAssets() {
   let response = await fetch("CharacterCreator.json")
   let assets = await response.json();
   let AssetArray = (assets[Catergory][ItemTypeString]);
-
-  // console.log(assets.BodyLimbs.Head[0].FrontView.FilePath);
-  
-  /*
-  console.log(assets)
-  console.log(Catergory);
-  console.log(ItemTypeString);
-  console.log(View);                // SMT IS WRONG WITH VIEW. IDKKKKKKKKK
-
-
-
-// lol I don't need this???  let AssetArray = (assets[Catergory][ItemTypeString][View]);           //this MAY be broken. Since I changed the view. It used to be View, Catergory, Type. But now View is INSIDE Type.   /// wait. WHY do I have this as an array??? /// oh is to save the vategory things maybe??
- */
 
   AddAssetsToDiv(AssetArray);
 
@@ -281,8 +269,6 @@ function AddAssetsToDiv (AssetLocation){
     // endy end of that
 
     AssetLocation.forEach(Asset => {
-        console.log(Asset[View].FilePath);
-        
         AssetFilePath = Asset[View].FilePath;
         AssetFilePathURL = ("url('"+AssetFilePath+"')");
       
@@ -292,19 +278,25 @@ function AddAssetsToDiv (AssetLocation){
         Btn.classList.add(ItemTypeString);
         Btn.style.backgroundImage = [AssetFilePathURL];
         Btn.title = Asset.Name;
+
+        console.log(AssetFilePath);
               Btn.addEventListener("click", () => {
-                GetSVGPathAndDraw(AssetFilePath)
+                CurrentAssetFilePath = Asset[View].FilePath;
+                GetSVGPathAndDraw(CurrentAssetFilePath)
            })
       });
 };
 
-async function GetSVGPathAndDraw() {
-    const resp = await fetch('/Body/Head.svg');
+async function GetSVGPathAndDraw(AssetFilePath) {
+
+    const resp = await fetch(AssetFilePath);
     const parser = new DOMParser();
     const svg = parser.parseFromString(await resp.text(), 'image/svg+xml');
     const path = svg.querySelector('path');
     const d = path.getAttribute('d');
 
+    console.log(View);
+    
     DrawOnCanvas(d, ItemTypeVariable[ItemTypeString].Canvas, ItemTypeVariable[ItemTypeString])
 };
 
@@ -430,7 +422,6 @@ function DrawOnCanvas(Path, CurrentCanvas, Currentctx){
     Currentctx.Path   = Path;
     LatestCanvas      = CurrentCanvas;
     LatestCtx         = Currentctx
-    console.log(Currentctx)
 
     CurrentCanvas.reset()
 
@@ -448,9 +439,7 @@ function DrawOnCanvas(Path, CurrentCanvas, Currentctx){
     CurrentCanvas.fill(path2);
     CurrentCanvas.stroke(path1);
     
-    console.log(Currentctx.Ycoords);
-    console.log(Currentctx)
-    console.log("Draw On Canvas Done");
+//    console.log("Draw On Canvas Done");
 }
 
 
